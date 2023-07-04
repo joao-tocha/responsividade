@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+  text-align: justify;
+  --cor-objetos:#0b0483;
+  --sombra: 0px 3px 9px rgba(0,0,0,0.12), 0px 3px 9px rgba(0,0,0,0.24);
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+  background-color: #f2f2f2;
+}
+
+body {
+  margin: 0px;
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #07025a;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the bottom of the page */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--sombra);
+}
+
+/* Links inside the navbar */
+.navbar a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #f2f2f2;
+  color: black;
+}
+
+.header {
+  background-color: var(--cor-objetos);
+  color: #f2f2f2;
+  padding: 5px;
+}
+
+.row::after {
+  margin-top: 10px;
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.aside {
+  background-color: var(--cor-objetos);
+  padding: 15px;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: var(--sombra);
+}
+
+.aside img{
+  width: 100%;
+}
+  
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  bottom: 0;
+  background-color: var(--cor-objetos);
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  box-shadow: var(--sombra);
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .header {margin-top: 50px;}
+  .col-direita {
+    width: 30%;
+    margin-bottom: auto;
+  }
+  .col-esquerda {
+    width: 70%; 
+    background-color: #f2f2f2;
+    margin: 0;
+  }
+  .navbar {
+    bottom: auto;
+    top: 0; 
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .footer {margin-bottom: 0px;}
+}
